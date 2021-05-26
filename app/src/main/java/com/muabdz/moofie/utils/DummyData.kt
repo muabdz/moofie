@@ -1,5 +1,6 @@
 package com.muabdz.moofie.utils
 
+import com.muabdz.moofie.R
 import com.muabdz.moofie.data.MovieEntity
 
 object DummyData {
@@ -15,9 +16,9 @@ object DummyData {
                 "02/14/2019",
                 "PG-13",
                 72,
-                arrayListOf("Action", "Science Fiction", "Adventure"),
+                "Action, Science Fiction, Adventure",
                 "2h 2m",
-                "file://android_asset/movies/poster_alita.jpg"
+                R.drawable.poster_alita
         ))
 
         movies.add(
@@ -28,9 +29,9 @@ object DummyData {
             "12/21/2018",
             "PG-13",
             69,
-            arrayListOf("Action", "Adventure", "Fantasy"),
+            "Action, Adventure, Fantasy",
                 "2h 23m",
-                "file://android_asset/movies/poster_aquaman.jpg"
+                R.drawable.poster_aquaman
         ))
 
         movies.add(
@@ -41,9 +42,9 @@ object DummyData {
                 "11/02/2018",
                 "PG-13",
                 80,
-                arrayListOf("Music", "Drama", "History"),
+                "Music, Drama, History",
                 "2h 15m",
-                "file://android_asset/movies/poster_bohemian.jpg"
+                R.drawable.poster_bohemian
             ))
 
         movies.add(
@@ -54,9 +55,9 @@ object DummyData {
                 "11/21/2018",
                 "PG-13",
                 69,
-                arrayListOf("Drama"),
+                "Drama",
                 "2h 10m",
-                "file://android_asset/movies/poster_creed.jpg"
+                R.drawable.poster_creed
             ))
 
         movies.add(
@@ -67,9 +68,9 @@ object DummyData {
                 "11/16/2018",
                 "PG-13",
                 69,
-                arrayListOf("Adventure", "Fantasy", "Drama"),
+                "Adventure, Fantasy, Drama",
                 "2h 14m",
-                "file://android_asset/movies/poster_crimes.jpg"
+                R.drawable.poster_crimes
             ))
 
         movies.add(
@@ -80,9 +81,9 @@ object DummyData {
                 "01/18/2019",
                 "PG-13",
                 67,
-                arrayListOf("Thriller", "Drama", "Science Fiction"),
+                "Thriller, Drama, Science Fiction",
                 "2h 9m",
-                "file://android_asset/movies/poster_glass.jpg"
+                R.drawable.poster_glass
             ))
 
         movies.add(
@@ -93,9 +94,9 @@ object DummyData {
                 "01/09/2019",
                 "G",
                 78,
-                arrayListOf("Animation", "Family", "Adventure"),
+                "Animation, Family, Adventure",
                 "1h 44m",
-                "file://android_asset/movies/poster_how_to_train.jpg"
+                R.drawable.poster_how_to_train
             ))
 
         movies.add(
@@ -106,9 +107,9 @@ object DummyData {
                 "04/27/2018",
                 "PG-13",
                 83,
-                arrayListOf("Adventure", "Action", "Science Fiction"),
+                "Adventure, Action, Science Fiction",
                 "2h 29m",
-                "file://android_asset/movies/poster_infinity_war.jpg"
+                R.drawable.poster_infinity_war
             ))
 
         movies.add(
@@ -119,9 +120,9 @@ object DummyData {
                 "12/14/2018",
                 "PG-13",
                 61,
-                arrayListOf("Adventure", "Science Fiction"),
+                "Adventure, Science Fiction",
                 "2h 9m",
-                "file://android_asset/movies/poster_mortal_engines.jpg"
+                R.drawable.poster_mortal_engines
             ))
 
         movies.add(
@@ -132,9 +133,9 @@ object DummyData {
                 "11/09/2018",
                 "R",
                 67,
-                arrayListOf("Horror", "War", "Science Fiction"),
+                "Horror, War, Science Fiction",
                 "1h 50m",
-                "file://android_asset/movies/poster_overlord.jpg"
+                R.drawable.poster_overlord
             ))
 
         movies.add(
@@ -145,9 +146,9 @@ object DummyData {
                 "11/21/2018",
                 "PG-13",
                 72,
-                arrayListOf("Family", "Animation", "Comedy", "Adventure"),
+                "Family, Animation, Comedy, Adventure",
                 "1h 52m",
-                "file://android_asset/movies/poster_ralph.jpg"
+                R.drawable.poster_ralph
             ))
 
         movies.add(
@@ -158,9 +159,9 @@ object DummyData {
                 "12/14/2018",
                 "PG-13",
                 84,
-                arrayListOf("Action", "Adventure", "Animation", "Science Fiction", "Comedy"),
+                "Action, Adventure, Animation, Science Fiction, Comedy",
                 "1h 57m",
-                "file://android_asset/movies/poster_spiderman.jpg"
+                R.drawable.poster_spiderman
             ))
 
         return movies

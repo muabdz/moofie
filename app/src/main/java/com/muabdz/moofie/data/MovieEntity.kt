@@ -7,7 +7,7 @@ data class MovieEntity(
     var releaseDate: String,
     var rating: String,
     var userScore: Int,
-    var genre: ArrayList<String>,
+    var genre: String,
     var duration: String,
-    var imagePath: String
+    var imageDrawable: Int
 )

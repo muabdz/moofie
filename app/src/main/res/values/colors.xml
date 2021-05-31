@@ -10,4 +10,5 @@
     <color name="neutral545454">#545454</color>
     <color name="neutral343434">#343434</color>
     <color name="placeholder">#6FB6B6B6</color>
+    <color name="accentFF8080">#ff8080</color>
 </resources>

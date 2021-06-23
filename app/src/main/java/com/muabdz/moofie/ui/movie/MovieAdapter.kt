@@ -42,7 +42,7 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
                 tvGenre.text = movie.genre
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, MovieDetailActivity::class.java)
-                    intent.putExtra(MovieDetailActivity.EXTRA_MOVIE, movie.id)
+                    intent.putExtra(MovieDetailActivity.EXTRA_MOVIE, movie.movieId)
                     itemView.context.startActivity(intent)
                 }
 

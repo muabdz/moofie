@@ -1,7 +1,7 @@
 package com.muabdz.moofie.data
 
 data class MovieEntity(
-    var id: String,
+    var movieId: String,
     var title: String,
     var description: String,
     var releaseDate: String,

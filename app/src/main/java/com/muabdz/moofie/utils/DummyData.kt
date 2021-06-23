@@ -2,6 +2,7 @@ package com.muabdz.moofie.utils
 
 import com.muabdz.moofie.R
 import com.muabdz.moofie.data.MovieEntity
+import com.muabdz.moofie.data.SeasonEntity
 import com.muabdz.moofie.data.TvShowEntity
 
 object DummyData {
@@ -317,5 +318,47 @@ object DummyData {
         )
 
         return tvShows
+    }
+
+    fun generateDummySeasons(tvShowId: String): ArrayList<SeasonEntity> {
+
+        val seasons = ArrayList<SeasonEntity>()
+
+        seasons.add(SeasonEntity(
+            "${tvShowId}s1",
+            tvShowId,
+            "Prologue",
+            8
+        ))
+
+        seasons.add(SeasonEntity(
+            "${tvShowId}s2",
+            tvShowId,
+            "Intro",
+            10
+        ))
+
+        seasons.add(SeasonEntity(
+            "${tvShowId}s3",
+            tvShowId,
+            "Act I",
+            12
+        ))
+
+        seasons.add(SeasonEntity(
+            "${tvShowId}s4",
+            tvShowId,
+            "Act II",
+            16
+        ))
+
+        seasons.add(SeasonEntity(
+            "${tvShowId}s5",
+            tvShowId,
+            "Finale",
+            16
+        ))
+
+        return seasons
     }
 }

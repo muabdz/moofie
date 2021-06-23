@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.muabdz.moofie.R
 import com.muabdz.moofie.ui.movie.MovieFragment
+import com.muabdz.moofie.ui.tvshow.TvShowFragment
 
 class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager): FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
@@ -20,7 +21,7 @@ class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager): 
     override fun getItem(position: Int): Fragment =
         when(position) {
             0 -> MovieFragment()
-            1 -> MovieFragment()
+            1 -> TvShowFragment()
             else -> MovieFragment()
         }
 

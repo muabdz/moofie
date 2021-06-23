@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/neutral343434"
-    tools:context=".ui.detail.MovieDetailActivity">
+    tools:context=".ui.movie.detail.MovieDetailActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

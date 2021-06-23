@@ -9,7 +9,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.muabdz.moofie.R
 import com.muabdz.moofie.data.MovieEntity
 import com.muabdz.moofie.databinding.ItemsMovieListBinding
-import com.muabdz.moofie.ui.detail.MovieDetailActivity
+import com.muabdz.moofie.ui.movie.detail.MovieDetailActivity
 
 class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
@@ -31,7 +31,7 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
         holder.bind(movie)
     }
 
-    override fun getItemCount(): Int =listMovies.size
+    override fun getItemCount(): Int = listMovies.size
 
     class MovieViewHolder(private val binding: ItemsMovieListBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(movie: MovieEntity) {

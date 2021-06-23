@@ -1,4 +1,4 @@
-package com.muabdz.moofie.ui.detail
+package com.muabdz.moofie.ui.movie.detail
 
 import androidx.lifecycle.ViewModel
 import com.muabdz.moofie.data.MovieEntity

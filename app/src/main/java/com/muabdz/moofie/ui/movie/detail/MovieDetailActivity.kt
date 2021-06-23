@@ -1,4 +1,4 @@
-package com.muabdz.moofie.ui.detail
+package com.muabdz.moofie.ui.movie.detail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

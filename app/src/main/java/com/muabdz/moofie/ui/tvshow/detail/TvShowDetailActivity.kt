@@ -10,7 +10,6 @@ import com.bumptech.glide.request.RequestOptions
 import com.muabdz.moofie.R
 import com.muabdz.moofie.data.TvShowEntity
 import com.muabdz.moofie.databinding.ActivityTvShowDetailBinding
-import com.muabdz.moofie.utils.DummyData
 
 class TvShowDetailActivity : AppCompatActivity() {
     private lateinit var viewBinding: ActivityTvShowDetailBinding

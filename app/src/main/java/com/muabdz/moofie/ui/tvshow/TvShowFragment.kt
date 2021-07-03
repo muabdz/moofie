@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.muabdz.moofie.databinding.FragmentMovieBinding
 import com.muabdz.moofie.databinding.FragmentTvShowBinding
-import com.muabdz.moofie.ui.tvshow.detail.TvShowDetailViewModel
 
 class TvShowFragment : Fragment() {
 

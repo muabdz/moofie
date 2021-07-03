@@ -9,6 +9,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.muabdz.moofie.R
 import com.muabdz.moofie.data.TvShowEntity
 import com.muabdz.moofie.databinding.ItemsTvShowListBinding
+import com.muabdz.moofie.ui.tvshow.detail.TvShowDetailActivity
 
 class TvShowAdapter: RecyclerView.Adapter<TvShowAdapter.TvShowViewHolder>() {
 
@@ -39,7 +40,9 @@ class TvShowAdapter: RecyclerView.Adapter<TvShowAdapter.TvShowViewHolder>() {
                 tvDate.text = tvShow.releaseDate
                 tvGenre.text  = tvShow.genre
                 itemView.setOnClickListener {
-                    // TODO: 23/06/2021 move to tv show detail
+                    val intent = Intent(itemView.context, TvShowDetailActivity::class.java)
+                    intent.putExtra(TvShowDetailActivity.EXTRA_TV_SHOW, tvShow.tvShowId)
+                    itemView.context.startActivity(intent)
                 }
 
                 Glide.with(itemView.context)

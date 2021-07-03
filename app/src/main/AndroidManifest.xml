@@ -10,7 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moofie">
         <activity
-            android:name="com.muabdz.moofie.ui.movie.detail.MovieDetailActivity"
+            android:name=".ui.tvshow.detail.TvShowDetailActivity"
+            android:label="@string/tv_show_detail"
+            android:parentActivityName=".ui.main.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.main.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.movie.detail.MovieDetailActivity"
             android:label="@string/movie_detail"
             android:parentActivityName=".ui.main.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">

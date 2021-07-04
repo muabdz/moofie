@@ -2,7 +2,7 @@ package com.muabdz.moofie.ui.main
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.*
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers.*
@@ -16,6 +16,7 @@ class MainActivityTest {
 
     private val dummyMovie = DummyData.generateDummyMovies()
     private val dummyTvShow = DummyData.generateDummyTvShows()
+    private val dummySeason = DummyData.generateDummySeasons(dummyTvShow[0].tvShowId)
 
     @get:Rule
     var activityRule = ActivityScenarioRule(MainActivity::class.java)
@@ -35,6 +36,15 @@ class MainActivityTest {
         onView(withId(R.id.tv_duration)).check(matches(withText(dummyMovie[0].duration)))
         onView(withId(R.id.tv_date)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_date)).check(matches(withText(dummyMovie[0].releaseDate)))
+        onView(withId(R.id.sv_movie_detail)).perform(swipeUp())
+        onView(withId(R.id.tv_rating)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_rating)).check(matches(withText(dummyMovie[0].rating)))
+        onView(withId(R.id.tv_user_score)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_user_score)).check(matches(withText(dummyMovie[0].userScore.toString())))
+        onView(withId(R.id.tv_genre)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_genre)).check(matches(withText(dummyMovie[0].genre)))
+        onView(withId(R.id.tv_description)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_description)).check(matches(withText(dummyMovie[0].description)))
     }
 
     @Test
@@ -53,5 +63,14 @@ class MainActivityTest {
         onView(withId(R.id.tv_title)).check(matches(withText(dummyTvShow[0].title)))
         onView(withId(R.id.tv_date)).check(matches(isDisplayed()))
         onView(withId(R.id.tv_date)).check(matches(withText(dummyTvShow[0].releaseDate)))
+        onView(withId(R.id.sv_tv_show_detail)).perform(swipeUp())
+        onView(withId(R.id.tv_user_score)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_user_score)).check(matches(withText(dummyTvShow[0].userScore.toString())))
+        onView(withId(R.id.tv_genre)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_genre)).check(matches(withText(dummyTvShow[0].genre)))
+        onView(withId(R.id.tv_description)).check(matches(isDisplayed()))
+        onView(withId(R.id.tv_description)).check(matches(withText(dummyTvShow[0].description)))
+        onView(withId(R.id.rv_seasons)).check(matches(isDisplayed()))
+        onView(withId(R.id.rv_seasons)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(dummySeason.size))
     }
 }

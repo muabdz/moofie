@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         style="?android:attr/progressBarStyle"
+        android:indeterminateTint="@color/accentFF8080"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

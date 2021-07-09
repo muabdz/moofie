@@ -22,7 +22,7 @@
             android:layout_height="0dp"
             android:maxHeight="150dp"
             android:scaleType="fitXY"
-            android:src="@color/teal_200"
+            android:src="@color/accentFF8080"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -18,8 +18,17 @@ android {
 
     buildTypes {
         release {
+            buildConfigField "String", 'API_KEY', '"c33b2acedf52d6016caf3dbbe3d718da"'
+            buildConfigField "String", 'BASE_URL', '"https://api.themoviedb.org/3"'
+            buildConfigField "String", 'IMAGE_URL', '"https://image.tmdb.org/t/p/w500"'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            buildConfigField "String", 'API_KEY', '"c33b2acedf52d6016caf3dbbe3d718da"'
+            buildConfigField "String", 'BASE_URL', '"https://api.themoviedb.org/3"'
+            buildConfigField "String", 'IMAGE_URL', '"https://image.tmdb.org/t/p/w500"'
         }
     }
     buildFeatures {
@@ -49,10 +58,18 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     //testing
     testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.mockito:mockito-inline:$mockitoVersion"
+    testImplementation "androidx.arch.core:core-testing:$androidCoreTestVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
     androidTestImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
     androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
@@ -60,4 +77,5 @@ dependencies {
     androidTestImplementation "androidx.test:rules:$androidTestVersion"
     androidTestImplementation "androidx.test.ext:junit:$junitExtversion"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "com.android.support.test.espresso:espresso-idling-resource:$idleResourceVersion"
 }
